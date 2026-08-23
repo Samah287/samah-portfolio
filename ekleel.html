@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إكليل | Ekleel — Samah Nasr</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* ==================================================
+           GENERAL
+        ================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            background: #f8f9fb;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+
+        /* ==================================================
+           NAVBAR
+        ================================================== */
+
+        .navbar {
+            height: 76px;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #e9edf3;
+
+            display: flex;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .logo-box {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #172033;
+            color: white;
+
+            border-radius: 11px;
+
+            font-size: 16px;
+        }
+
+        .back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #64748b;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            color: #4f8cff;
+            transform: translateX(4px);
+        }
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .hero {
+            padding: 100px 0 80px;
+
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(79,140,255,0.10),
+                    transparent 30%
+                ),
+                #ffffff;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .small-title {
+            color: #4f8cff;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 7vw, 90px);
+
+            line-height: 1;
+
+            font-weight: 800;
+
+            color: #172033;
+        }
+
+        .hero h1 span {
+            color: #4f8cff;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+
+            color: #475569;
+
+            font-weight: 600;
+
+            margin-top: 18px;
+        }
+
+        .hero-text {
+            margin-top: 20px;
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 2;
+
+            max-width: 580px;
+        }
+
+        .technologies {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 25px;
+        }
+
+        .technology {
+            background: #eef5ff;
+
+            color: #3979e8;
+
+            padding: 7px 13px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* ==================================================
+           HERO VISUAL
+        ================================================== */
+
+        .hero-visual {
+            min-height: 420px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f0f5ff,
+                    #ffffff
+                );
+
+            border: 1px solid #e3e9f2;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                0 30px 80px rgba(23,32,51,0.08);
+        }
+
+        .hero-visual::before {
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            border: 1px solid rgba(79,140,255,0.15);
+
+            border-radius: 50%;
+        }
+
+        .hero-visual::after {
+            content: "";
+
+            position: absolute;
+
+            width: 230px;
+            height: 230px;
+
+            border: 1px solid rgba(79,140,255,0.15);
+
+            border-radius: 50%;
+        }
+
+        .ekleel-mark {
+            width: 120px;
+            height: 120px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 55px;
+
+            font-weight: 800;
+
+            color: #172033;
+
+            box-shadow:
+                0 25px 60px rgba(23,32,51,0.12);
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-visual-text {
+            position: absolute;
+
+            bottom: 45px;
+
+            text-align: center;
+
+            z-index: 2;
+        }
+
+        .hero-visual-text h3 {
+            font-size: 25px;
+
+            letter-spacing: 5px;
+        }
+
+        .hero-visual-text p {
+            color: #64748b;
+
+            font-size: 10px;
+
+            margin-top: 4px;
+        }
+
+
+        /* ==================================================
+           ABOUT PROJECT
+        ================================================== */
+
+        .about {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: #4f8cff;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+        .section-title {
+            font-size: 38px;
+
+            margin-top: 8px;
+
+            font-weight: 800;
+        }
+
+        .section-title span {
+            color: #4f8cff;
+        }
+
+        .section-description {
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 2;
+
+            margin-top: 10px;
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .about-card {
+            background: white;
+
+            border: 1px solid #e5eaf1;
+
+            border-radius: 20px;
+
+            padding: 32px;
+
+            transition: 0.35s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 20px 50px rgba(23,32,51,0.07);
+        }
+
+        .about-card h3 {
+            font-size: 17px;
+
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: #64748b;
+
+            font-size: 12px;
+
+            line-height: 2;
+        }
+
+
+        /* ==================================================
+           ROLE
+        ================================================== */
+
+        .role {
+            background: #172033;
+
+            color: white;
+
+            padding: 80px 0;
+        }
+
+        .role-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .role .section-label {
+            color: #83b0ff;
+        }
+
+        .role h2 {
+            font-size: 38px;
+
+            margin-top: 8px;
+        }
+
+        .role p {
+            color: #aab5c7;
+
+            font-size: 13px;
+
+            line-height: 2;
+
+            margin-top: 15px;
+        }
+
+        .role-list {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .role-item {
+            padding: 16px 18px;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 13px;
+
+            background: rgba(255,255,255,0.04);
+
+            font-size: 12px;
+        }
+
+        .role-item span {
+            color: #83b0ff;
+
+            margin-left: 8px;
+
+            font-weight: 800;
+        }
+
+
+        /* ==================================================
+           FEATURES
+        ================================================== */
+
+        .features {
+            padding: 100px 0;
+
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 45px;
+        }
+
+        .feature {
+            padding: 25px;
+
+            border: 1px solid #e5eaf1;
+
+            border-radius: 17px;
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+
+            border-color: #cbdcff;
+        }
+
+        .feature-number {
+            font-size: 11px;
+
+            color: #4f8cff;
+
+            font-weight: 800;
+        }
+
+        .feature h3 {
+            font-size: 15px;
+
+            margin-top: 12px;
+        }
+
+        .feature p {
+            color: #64748b;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+
+            margin-top: 6px;
+        }
+
+
+        /* ==================================================
+           GALLERY
+        ================================================== */
+
+        .gallery-section {
+            padding: 100px 0;
+        }
+
+        .gallery-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            margin-bottom: 40px;
+        }
+
+        .gallery-note {
+            color: #94a3b8;
+
+            font-size: 11px;
+        }
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .gallery-item {
+            height: 230px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #e9edf3;
+
+            cursor: pointer;
+
+            position: relative;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+
+            height: 320px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(15,23,42,0.75),
+                    transparent 60%
+                );
+
+            opacity: 0;
+
+            transition: 0.3s;
+
+            display: flex;
+
+            align-items: end;
+
+            padding: 20px;
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+
+        /* ==================================================
+           LIGHTBOX
+        ================================================== */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(5,10,20,0.95);
+
+            z-index: 9999;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 88%;
+
+            max-height: 85vh;
+
+            border-radius: 12px;
+
+            object-fit: contain;
+        }
+
+        .close,
+        .prev,
+        .next {
+            position: absolute;
+
+            width: 48px;
+            height: 48px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.12);
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 18px;
+        }
+
+        .close {
+            top: 25px;
+            right: 30px;
+        }
+
+        .prev {
+            left: 25px;
+            top: 50%;
+
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 25px;
+            top: 50%;
+
+            transform: translateY(-50%);
+        }
+
+        .close:hover,
+        .prev:hover,
+        .next:hover {
+            background: #4f8cff;
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            background: #0e1525;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 30px;
+
+            font-size: 11px;
+        }
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 800px) {
+
+            .hero-grid,
+            .about-grid,
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .features-grid,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            .gallery-item,
+            .gallery-item.large {
+                height: 230px;
+            }
+
+            .gallery-header {
+                display: block;
+            }
+
+            .gallery-note {
+                display: block;
+                margin-top: 8px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="back">
+            ← العودة إلى البورتفوليو
+        </a>
+
+        <a href="index.html" class="logo">
+
+            <span>سماح</span>
+
+            <span class="logo-box">
+                S
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+            <div class="small-title">
+                FEATURED PROJECT
+            </div>
+
+            <h1>
+                إكليل
+                <span>.</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                منصة إلكترونية لحجز خدمات الأعراس
+            </div>
+
+            <p class="hero-text">
+
+                إكليل هو مشروع ويب يهدف إلى تسهيل عملية
+                البحث عن خدمات الأعراس والوصول إلى مقدمي
+                الخدمات وحجز الخدمات المناسبة من خلال
+                منصة إلكترونية واحدة.
+
+            </p>
+
+
+            <div class="technologies">
+
+                <span class="technology">Python</span>
+
+                <span class="technology">Django</span>
+
+                <span class="technology">MySQL</span>
+
+                <span class="technology">HTML</span>
+
+                <span class="technology">CSS</span>
+
+                <span class="technology">Bootstrap</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="ekleel-mark">
+                E
+            </div>
+
+            <div class="hero-visual-text">
+
+                <h3>EKLEEL</h3>
+
+                <p>
+                    WEDDING BOOKING PLATFORM
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="section-label">
+            ABOUT THE PROJECT
+        </div>
+
+        <h2 class="section-title">
+            عن <span>المشروع</span>
+        </h2>
+
+        <p class="section-description">
+            نبذة مختصرة عن فكرة إكليل والهدف من تطويره.
+        </p>
+
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>
+                    فكرة المشروع
+                </h3>
+
+                <p>
+
+                    إنشاء منصة تساعد المستخدمين على اكتشاف
+                    خدمات الأعراس المختلفة في مكان واحد،
+                    مع إمكانية الاطلاع على تفاصيل الخدمات
+                    وإجراء الحجوزات بطريقة سهلة ومنظمة.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>
+                    الهدف
+                </h3>
+
+                <p>
+
+                    توفير تجربة رقمية تسهّل عملية البحث
+                    والمقارنة والحجز، وتساعد مقدمي الخدمات
+                    على عرض خدماتهم والوصول إلى العملاء.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MY ROLE
+================================================== -->
+
+<section class="role">
+
+    <div class="container role-grid">
+
+        <div>
+
+            <div class="section-label">
+                MY ROLE
+            </div>
+
+            <h2>
+                دوري في المشروع
+            </h2>
+
+            <p>
+
+                شاركت في تصميم وتطوير المشروع وربط
+                واجهات الموقع بقاعدة البيانات وتنفيذ
+                الوظائف الأساسية للنظام.
+
+            </p>
+
+        </div>
+
+
+        <div class="role-list">
+
+            <div class="role-item">
+                <span>01</span>
+                تصميم واجهات المستخدم
+            </div>
+
+            <div class="role-item">
+                <span>02</span>
+                تطوير صفحات الموقع
+            </div>
+
+            <div class="role-item">
+                <span>03</span>
+                تصميم وربط قاعدة البيانات
+            </div>
+
+            <div class="role-item">
+                <span>04</span>
+                تنفيذ نظام الحجز
+            </div>
+
+            <div class="role-item">
+                <span>05</span>
+                اختبار وتحسين تجربة المستخدم
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FEATURES
+================================================== -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-label">
+            MAIN FEATURES
+        </div>
+
+        <h2 class="section-title">
+            أهم <span>المميزات</span>
+        </h2>
+
+        <p class="section-description">
+            مجموعة من الوظائف الأساسية الموجودة في المشروع.
+        </p>
+
+
+        <div class="features-grid">
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>
+                    تسجيل الدخول وإنشاء الحساب
+                </h3>
+
+                <p>
+                    نظام للمستخدمين لإنشاء الحسابات
+                    وتسجيل الدخول إلى المنصة.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>
+                    عرض الخدمات
+                </h3>
+
+                <p>
+                    عرض الخدمات ومعلومات مقدمي الخدمات
+                    بطريقة واضحة ومنظمة.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>
+                    نظام الحجز
+                </h3>
+
+                <p>
+                    إمكانية اختيار الخدمة والتاريخ
+                    وإجراء عملية الحجز.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    04
+                </div>
+
+                <h3>
+                    إدارة البيانات
+                </h3>
+
+                <p>
+                    تخزين وإدارة بيانات المستخدمين
+                    والخدمات والحجوزات.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    05
+                </div>
+
+                <h3>
+                    واجهة عربية
+                </h3>
+
+                <p>
+                    تصميم يدعم اللغة العربية واتجاه
+                    RTL بطريقة مناسبة للمستخدم.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    06
+                </div>
+
+                <h3>
+                    تصميم متجاوب
+                </h3>
+
+                <p>
+                    واجهة مناسبة لأحجام الشاشات المختلفة.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     GALLERY
+================================================== -->
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <div class="gallery-header">
+
+            <div>
+
+                <div class="section-label">
+                    PROJECT SCREENSHOTS
+                </div>
+
+                <h2 class="section-title">
+                    صور من <span>إكليل</span>
+                </h2>
+
+            </div>
+
+            <div class="gallery-note">
+                اضغطي على الصورة لمشاهدتها بحجم أكبر
+            </div>
+
+        </div>
+
+
+        <div class="gallery" id="gallery">
+
+
+            <div class="gallery-item large">
+
+                <img
+                    src="images/ekleel/01-home.png"
+                    alt="الصفحة الرئيسية لإكليل">
+
+                <div class="gallery-overlay">
+                    الصفحة الرئيسية
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/02-register.png"
+                    alt="إنشاء حساب">
+
+                <div class="gallery-overlay">
+                    إنشاء حساب
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/03-dashboard_vendor.png"
+                    alt="لوحه التاجر ">
+
+                <div class="gallery-overlay">
+                    لوحه التاحر
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/04-services.png"
+                    alt="الخدمات">
+
+                <div class="gallery-overlay">
+                    الخدمات
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/05-details.png"
+                    alt="تفاصيل الخدمة">
+
+                <div class="gallery-overlay">
+                    تفاصيل الخدمة
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/06-booking.png"
+                    alt="الحجز">
+
+                <div class="gallery-overlay">
+                    الحجز
+                </div>
+
+            </div>
+                        <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/07-user_dashboard.png"
+                    alt=" لوحه المستخدم">
+
+                <div class="gallery-overlay">
+                    لوحه المستخدم
+                </div>
+
+            </div>
+            
+            
+                        <div class="gallery-item">
+
+                <img
+                    src="images/ekleel/08-payement.png"
+                    alt="  صفحة الدفع">
+
+                <div class="gallery-overlay">
+                     صفحه الدفع
+                </div>
+
+                
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     LIGHTBOX
+================================================== -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close" id="close">
+        ✕
+    </button>
+
+    <button class="prev" id="prev">
+        →
+    </button>
+
+    <img id="lightboxImage" src="" alt="">
+
+    <button class="next" id="next">
+        ←
+    </button>
+
+</div>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    © 2026 Samah Nasr — Ekleel Project
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+    const items =
+        document.querySelectorAll(".gallery-item");
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const image =
+        document.getElementById("lightboxImage");
+
+    const close =
+        document.getElementById("close");
+
+    const next =
+        document.getElementById("next");
+
+    const prev =
+        document.getElementById("prev");
+
+
+    let current = 0;
+
+
+    function showImage(index) {
+
+        current = index;
+
+        const selectedImage =
+            items[current].querySelector("img");
+
+        image.src = selectedImage.src;
+
+        image.alt = selectedImage.alt;
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+    }
+
+
+    function nextImage() {
+
+        current++;
+
+        if (current >= items.length) {
+            current = 0;
+        }
+
+        showImage(current);
+    }
+
+
+    function previousImage() {
+
+        current--;
+
+        if (current < 0) {
+            current = items.length - 1;
+        }
+
+        showImage(current);
+    }
+
+
+    items.forEach((item, index) => {
+
+        item.addEventListener("click", () => {
+
+            showImage(index);
+
+        });
+
+    });
+
+
+    next.addEventListener(
+        "click",
+        nextImage
+    );
+
+
+    prev.addEventListener(
+        "click",
+        previousImage
+    );
+
+
+    close.addEventListener(
+        "click",
+        () => {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+    );
+
+
+    lightbox.addEventListener("click", (event) => {
+
+        if (event.target === lightbox) {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+
+        if (!lightbox.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+        if (event.key === "ArrowLeft") {
+            nextImage();
+        }
+
+        if (event.key === "ArrowRight") {
+            previousImage();
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
